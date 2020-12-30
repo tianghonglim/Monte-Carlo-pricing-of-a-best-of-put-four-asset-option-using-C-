@@ -1,0 +1,178 @@
+void indepStdNorm(double a[]){
+	MarsagliaPolar(a[0],a[1]);
+	MarsagliaPolar(a[2],a[3]);
+
+}
+void corrStdNorm(double& y1, double& y2,double& y3, double& y4, double p12, p13, p14, p23, p24, p34,a, b, g, k){
+	double z1, z2,z3,z4;
+	MarsagliaPolar(z1, z2)
+	MarsagliaPolar(z3, z4)	;
+	y1 = z1;
+	y2 = p12*z1+sqrt(1-p12*p12)*z2;
+	a=(p23-p12*p13)/sqrt(1-p12^2)
+	y3=p13*z1+a*z2+sqrt(1-p13^2-a^2)*z3
+	b=(p24-p12*p24)/sqrt(1-p12^2)
+	g=sqrt(1-p13^2-a^2
+	k=(p34-p13*p14-a*b)/g
+	y4=p14*z1+b*z2+k*z3+sqrt(1-p14^2-b^2-k^2)*z4
+	
+	return; //optional
+}
+
+#include <iostream>
+#include<cmath>
+#include<cstdlib>
+#include <ctime>
+using namespace std;
+
+
+void MarsagliaPolar(double& z1, double& z2){
+	double u1,u2, x1, x2, s, sq;
+	
+	do{
+	u1=(double)rand()/RAND_MAX;
+	u2= (double)rand()/RAND_MAX;
+	x1 = 2*u1 - 1; 
+	x2 = 2*u2 - 1;
+	s=x1*x1 + x2*x2;
+
+	}
+	while(s>1 || s==0);
+	sq=sqrt(-2*log(s)/s);
+	z1=x1*sq;
+	z2=x2*sq;
+
+}
+
+	int main ()
+{
+	double K, T, r, v1, v2, v3, v4, p12, p13, p14, p23, p24, p34;
+	Int N;
+	cout<<"Please enter strike percentage: ";
+	cin >> K;
+	cout<<"Please enter time to maturity in years: ";
+	cin >> T;
+	cout<<"Please enter annualised interest rate: ";
+	cin >> r;
+	cout<<"Please enter number of times you wish to run the simulation: ";
+	cin >> N;
+	cout<<"Please enter volatility of first asset: ";
+	cin >> v1;
+	cout<<"Please enter volatility of second asset: ";
+	cin >> v2;
+	cout<<"Please enter volatility of third asset: ";
+	cin >> v3;
+	cout<<"Please enter volatility of fourth asset: ";
+	cin >> v4;
+	cout<<"Please enter correlation p12: ";
+	cin >> p12;
+	cout<<"Please enter correlation p13: ";
+	cin >> p13;
+	cout<<"Please enter correlation p14: ";
+	cin >> p14;
+	cout<<"Please enter correlation p23: ";
+	cin >> p23;
+	cout<<"Please enter correlation p24: ";
+	cin >> p24;
+	cout<<"Please enter correlation p34: ";
+	cin >> p34;
+
+	MarsagliaPolar(a[0],a[1]);
+
+  return a[0];
+}
+
+
+#include <iostream>
+#include<cmath>
+#include<cstdlib>
+#include <ctime>
+using namespace std;
+
+
+void MarsagliaPolar(double& z1, double& z2){
+	srand(time(0));
+
+	double u1,u2, x1, x2, s, sq;
+	
+	do{
+	u1=(double)rand()/RAND_MAX;
+	u2= (double)rand()/RAND_MAX;
+	x1 = 2*u1 - 1; 
+	x2 = 2*u2 - 1;
+	s=x1*x1 + x2*x2;
+
+	}
+	while(s>1 || s==0);
+	sq=sqrt(-2*log(s)/s);
+	z1=x1*sq;
+	z2=x2*sq;
+
+}
+
+	int main ()
+{
+	double K, T, r, v1, v2, v3, v4, p12, p13, p14, p23, p24, p34;
+	int N;
+	cout<<"Please enter strike percentage: ";
+	cin >> K;
+	cout<<"Please enter time to maturity in years: ";
+	cin >> T;
+	cout<<"Please enter annualised interest rate: ";
+	cin >> r;
+	cout<<"Please enter number of times you wish to run the simulation: ";
+	cin >> N;
+	cout<<"Please enter volatility of first asset: ";
+	cin >> v1;
+	cout<<"Please enter volatility of second asset: ";
+	cin >> v2;
+	cout<<"Please enter volatility of third asset: ";
+	cin >> v3;
+	cout<<"Please enter volatility of fourth asset: ";
+	cin >> v4;
+	cout<<"Please enter correlation p12: ";
+	cin >> p12;
+	cout<<"Please enter correlation p13: ";
+	cin >> p13;
+	cout<<"Please enter correlation p14: ";
+	cin >> p14;
+	cout<<"Please enter correlation p23: ";
+	cin >> p23;
+	cout<<"Please enter correlation p24: ";
+	cin >> p24;
+	cout<<"Please enter correlation p34: ";
+	cin >> p34;
+
+
+
+  return 0;
+}
+
+	void indepStdNorm(double a[]){
+	int a1=1;
+	MarsagliaPolar(a[a1],a[a1+1]);
+	MarsagliaPolar(a[a1+3],a[a1+4]);
+
+}
+void corrStdNorm(double& y[b][1], double& y[b][2],double& y[b][3], double& y[b][4], double p12, p13, p14, p23, p24, p34,a, b, g, k){
+	int b=1;
+	double z1, z2,z3,z4;
+	MarsagliaPolar(z1, z2)
+	MarsagliaPolar(z3, z4)	;
+	y[b][1] = z1;
+	y[b][2] = p12*z1+sqrt(1-p12*p12)*z2;
+	a=(p23-p12*p13)/sqrt(1-p12^2)
+	y[b][3]=p13*z1+a*z2+sqrt(1-p13^2-a^2)*z3
+	b=(p24-p12*p24)/sqrt(1-p12^2)
+	g=sqrt(1-p13^2-a^2
+	k=(p34-p13*p14-a*b)/g
+	y[b][4]=p14*z1+b*z2+k*z3+sqrt(1-p14^2-b^2-k^2)*z4
+	
+	return; //optional
+}
+
+void finalstockprice(double vol, random, r, T){
+	double finalprice=1*exp(vol*random + (r-0.5*vol)*T);
+}
+
+void randomarray(
